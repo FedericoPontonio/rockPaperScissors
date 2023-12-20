@@ -1,0 +1,17 @@
+
+function scorestatus()
+    else {
+        alerts need to be replaced with something else.
+        console.log for now??
+    }
+
+
+
+
+I'll need text boxes to contain:
+    -winCounter
+    -loseCounter
+    -playerSelection
+    -computerSelection
+    -report on single match outcome
+
