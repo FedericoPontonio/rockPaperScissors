@@ -25,8 +25,12 @@ function matchEvaluation(playerSelection) {
     let possibleSelections = ["rock", "paper", "scissors"];
     let computerSelection = possibleSelections[Math.floor(Math.random() * possibleSelections.length)];
 
-    console.log("opponent choice: " + computerSelection); 
-    console.log("your choice: " + playerSelection);       
+    let yourChoice = document.querySelector('#yourChoice');
+    yourChoice.textContent = playerSelection;
+    let opponentChoice = document.querySelector('#opponentChoice');
+    opponentChoice.textContent = computerSelection;
+
+
     
     if (computerSelection == "rock") {
 
@@ -36,12 +40,14 @@ function matchEvaluation(playerSelection) {
         else if (playerSelection == "paper") {
             alert("You won! Lucky you!");
             winCounter = increment(winCounter);
+            displayWinCounter.textContent = winCounter       
             scoreStatus();
             return winCounter;
         }
         else if (playerSelection == "scissors") {
             alert("You lost. Better luck next time :'(");
             loseCounter = increment(loseCounter);
+            displayLoseCounter.textContent = loseCounter
             scoreStatus();
             return loseCounter
         }
@@ -54,6 +60,7 @@ function matchEvaluation(playerSelection) {
         if (playerSelection =="rock") {
             alert("You lost. Better luck next time :'(");
             loseCounter = increment(loseCounter);
+            displayLoseCounter.textContent = loseCounter
             scoreStatus();
             return loseCounter
         }
@@ -63,6 +70,7 @@ function matchEvaluation(playerSelection) {
         else if (playerSelection == "scissors") {
             alert("You won! Lucky you!");
             winCounter = increment(winCounter);
+            displayWinCounter.textContent = winCounter       
             scoreStatus();
             return winCounter;
         }
@@ -75,12 +83,14 @@ function matchEvaluation(playerSelection) {
         if (playerSelection == "rock") {
             alert("You won! You rock!!!");
             winCounter = increment(winCounter);
+            displayWinCounter.textContent = winCounter       
             scoreStatus();
             return winCounter;
         }
         else if (playerSelection == "paper") {
             alert("You lost. Better luck next time :'(");
             loseCounter = increment(loseCounter);
+            displayLoseCounter.textContent = loseCounter
             scoreStatus();
             return loseCounter
         }
@@ -112,8 +122,12 @@ function scoreStatus() {
     };
 };
 
-function increment(counter) {
-    counter = ++counter
-    return counter
-}
 
+    let displayWinCounter = document.querySelector('#displayWinCounter');
+    let displayLoseCounter = document.querySelector('#displayLoseCounter');
+
+
+function increment(counter) {
+    counter = ++counter;
+    return counter;
+};
