@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 150px;
+    margin-bottom: 30px;
     margin-top: 20px;
     justify-content: center;
     border-radius: 50px;
@@ -13,15 +13,48 @@
     font-family: 'Courier New';
 }
 
-.gameData {
+
+.mainRow {
+    display: flex;
+    justify-content: space-around;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0,0,0,0.7);
+    border-radius: 50px;
+    color: beige;
+    padding: 10px;
+    width: 345px;
+    text-align: center;
+}
+
+.counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.centralColumn {
     display: flex;
     background: rgba(0,0,0,0.7);
     border-radius: 50px;
-    justify-content: space-around;
-    color: white;
-    margin-bottom: 20px;
-    margin-left: 100px;
+    color: beige;
+    padding: 20px;
+}
+
+#winCounter {
     margin-right: 100px;
+}
+
+.matchMessage {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    font-family: 'CARTOON FREE', sans-serif;
+    color: rgb(252, 252, 42);
 }
 
 img {
@@ -38,20 +71,13 @@ img {
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    margin-bottom: 50px;
     
 }
 
-#yourChoice,#opponentChoice{
-    display: flex;
-    background: rgba(0,0,0,0.7);
-    border-radius: 50px;
-    justify-content: space-around;
-    color: white;
-    margin-left: 100px;
-    margin-right: 100px;
+
+#yourChoice, #opponentChoice {
+    font-size: 40px;
 }
 
-.choices {
-    display: flex;
-    justify-content: space-around;
-}
+@import url('https://fonts.cdnfonts.com/css/cartoon-free');

@@ -29,23 +29,24 @@ function matchEvaluation(playerSelection) {
     yourChoice.textContent = playerSelection;
     let opponentChoice = document.querySelector('#opponentChoice');
     opponentChoice.textContent = computerSelection;
+    let matchOutcome = document.querySelector('#matchOutcome');
 
 
     
     if (computerSelection == "rock") {
 
         if (playerSelection == "rock") {
-            alert("It's a tie! C'mon, try again!");
+            matchOutcome.textContent = "It's a tie! C'mon, try again!";
         }
         else if (playerSelection == "paper") {
-            alert("You won! Lucky you!");
+            matchOutcome.textContent = 'You won! Lucky you!';
             winCounter = increment(winCounter);
             displayWinCounter.textContent = winCounter       
             scoreStatus();
             return winCounter;
         }
         else if (playerSelection == "scissors") {
-            alert("You lost. Better luck next time :'(");
+            matchOutcome.textContent = "You lost. Better luck next time :'(";
             loseCounter = increment(loseCounter);
             displayLoseCounter.textContent = loseCounter
             scoreStatus();
@@ -58,17 +59,17 @@ function matchEvaluation(playerSelection) {
     else if (computerSelection == "paper") {
 
         if (playerSelection =="rock") {
-            alert("You lost. Better luck next time :'(");
+            matchOutcome.textContent = "You lost. Better luck next time :'(";
             loseCounter = increment(loseCounter);
             displayLoseCounter.textContent = loseCounter
             scoreStatus();
             return loseCounter
         }
         else if (playerSelection == "paper") {
-            alert("It's a tie! C'mon, try again!");
+            matchOutcome.textContent = "It's a tie! C'mon, try again!";
         }
         else if (playerSelection == "scissors") {
-            alert("You won! Lucky you!");
+            matchOutcome.textContent = "You won! Lucky you!";
             winCounter = increment(winCounter);
             displayWinCounter.textContent = winCounter       
             scoreStatus();
@@ -81,21 +82,21 @@ function matchEvaluation(playerSelection) {
     else if (computerSelection == "scissors"){
 
         if (playerSelection == "rock") {
-            alert("You won! You rock!!!");
+            matchOutcome.textContent = "You won! You rock!!!";
             winCounter = increment(winCounter);
             displayWinCounter.textContent = winCounter       
             scoreStatus();
             return winCounter;
         }
         else if (playerSelection == "paper") {
-            alert("You lost. Better luck next time :'(");
+            matchOutcome.textContent = "You lost. Better luck next time :'(";
             loseCounter = increment(loseCounter);
             displayLoseCounter.textContent = loseCounter
             scoreStatus();
             return loseCounter
         }
         else if (playerSelection == "scissors") {
-            alert("It's a tie! C'mon, try again!");
+            matchOutcome.textContent = "It's a tie! C'mon, try again!";
         }
         else {
             alert("Invalid entry. You can chose between Rock, Paper or Scissors.")
@@ -116,10 +117,6 @@ function scoreStatus() {
         if(alert("You lost the game. Want the rematch?")){}
         else    window.location.reload();
     }
-    else {
-        alert("win = " + winCounter);
-        alert("lose = " + loseCounter);
-    };
 };
 
 

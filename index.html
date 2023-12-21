@@ -3,28 +3,67 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/cartoon-free" rel="stylesheet"> <!--import font-->
+
 </head>
 <body  style="background-image: url(arena.png); background-color: antiquewhite;">
     <div class="header">
         <h1>Pick your champion</h1>
         <h3>Best of five</h3>
     </div>
-    <div class="gameData">
-        <div><h1>You Chose: </h1></div>
-        <div><h1 id="displayWinCounter">0</h1></div>
-        <div><h1 id="displayLoseCounter">0</h1></div>
-        <div><h1>Your opponent Chose: </h1></div>
+
+    <div class="matchMessage">
+        <p id="matchOutcome"></p>
     </div>
-    <div class="choices">
-        <div><h1 id="yourChoice"></h1></div>
-        <div><h1 id="opponentChoice"></h1></div>
-    </div>
+
 
     <div class="icons">
         <div><img id="rock" src="rock.png" alt="rock"></div>
         <div><img id="paper" src="paper.png" alt="paper"></div>
         <div><img id="scissors" src="scissors.png" alt="scissors"></div>
     </div>
+
+    
+    <div class="mainRow">
+    
+        <div class="column">
+            <div class="columnElement">
+                <h1>You Chose: </h1>
+            </div>
+            <div class="columnElement">
+                <h1 id="yourChoice"></h1>
+            </div>
+        </div>
+    
+        <div class="centralColumn">
+            <div class="counter" id="winCounter">
+                <div class="columnElement">
+                    <h1>Win count</h1>
+                </div>
+                <div class="columnElement">
+                    <h1 id="displayWinCounter">0</h1>
+                </div>
+            </div>
+            <div class="counter">
+                <div class="columnElement">
+                    <h1>Lose count</h1>
+                </div>
+                <div class="columnElement">
+                    <h1 id="displayLoseCounter">0</h1>
+                </div>
+            </div>
+        </div>
+    
+        <div class="column">
+            <div class="columnElement">
+                <h1>Your opponent Chose: </h1>
+            </div>
+            <div class="columnElement">
+                <h1 id="opponentChoice"></h1>
+            </div>
+        </div>
+    </div>
+
     
 <script src="script.js"></script>
 
